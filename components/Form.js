@@ -1,14 +1,16 @@
+import { setStatusBarNetworkActivityIndicatorVisible } from 'expo-status-bar'
 import React from 'react'
 import { View, StyleSheet, Text, TextInput } from 'react-native'
 
-const Form = props => (
+const Form = ({onSubmit, onChangeText}) => (
   <View style={styles.header}>
     <Text style={styles.title}>Open Weather App</Text>
     <TextInput
       style={styles.textInput}
       placeholder='Input a city name and country code'
-      onChangeText={props.onChangeText}
-      onEndEditing={props.onSubmit}
+      onSubmit={onSubmit}
+      onChangeText={onChangeText}
+      // onEndEditing={props.onSubmit}
     />
   </View>
 )

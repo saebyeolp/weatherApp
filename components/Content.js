@@ -1,21 +1,23 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Content = props => (
-  <View style={styles.content}>
-    <View>
-      {props.temp ? (
-        <Text style={styles.info}>{Math.round(props.temp)}&#8451;C</Text>
-      ) : null}
+const Content = ({temp, countryCode, weather, city}) =>{ 
+  return(
+    <View style={styles.content}>
+      <View>
+        {temp ? (
+          <Text style={styles.info}>{Math.round(temp)}&#8451;C</Text>
+        ) : null}
+      </View>
+      <View>
+        {weather ? <Text style={styles.info}>{weather}</Text> : null}
+      </View>
+      <View>
+        <Text style={styles.cityName}>{city}</Text>
+      </View>
     </View>
-    <View>
-      {props.weather ? <Text style={styles.info}>{props.weather}</Text> : null}
-    </View>
-    <View>
-      <Text style={styles.cityName}>{props.city}</Text>
-    </View>
-  </View>
-)
+  )
+}
 
 export default Content
 

@@ -3,10 +3,10 @@ import { View, Text, StyleSheet } from 'react-native'
 
 import moment from 'moment'
 
-const Footer = props => (
+const Footer = ({pressure, windSpeed, minTemp}) => (
   <View style={styles.footer}>
     <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-      {props.pressure ? (
+      {pressure ? (
         <Text
           style={{
             fontSize: 15,
@@ -19,7 +19,7 @@ const Footer = props => (
         </Text>
       ) : null}
     </View>
-    {props.pressure && props.windSpeed && props.minTemp ? (
+    {pressure && windSpeed && minTemp ? (
       <View
         style={{
           flexDirection: 'row',
