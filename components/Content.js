@@ -45,3 +45,5 @@ const styles = StyleSheet.create({
     paddingBottom: 25
   }
 })
+
+// code from https://github.com/paulhklam1122/weather-app-wmdd-sept-2020

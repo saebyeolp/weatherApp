@@ -62,3 +62,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   }
 })
+
+// code from https://github.com/paulhklam1122/weather-app-wmdd-sept-2020
