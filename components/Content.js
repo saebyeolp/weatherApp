@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Content = ({temp, countryCode, weather, city}) =>{ 
+const Content = ({temp, weather, city}) =>{ 
   return(
     <View style={styles.content}>
       <View>
@@ -9,12 +9,12 @@ const Content = ({temp, countryCode, weather, city}) =>{
           <Text style={styles.info}>{Math.round(temp)}&#8451;C</Text>
         ) : null}
       </View>
-      <View>
+      {/* <View>
         {weather ? <Text style={styles.info}>{weather}</Text> : null}
       </View>
       <View>
         <Text style={styles.cityName}>{city}</Text>
-      </View>
+      </View> */}
     </View>
   )
 }
